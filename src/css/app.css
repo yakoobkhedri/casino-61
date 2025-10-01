@@ -1,0 +1,394 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: fanumber-Regular;
+  font-weight: 400;
+  src: url('../src/fonts/YekanBakhFaNum-Regular.woff') format("woff");
+}
+@font-face {
+  font-family: fanumber-Bold;
+  font-weight: 400;
+  src: url('../src/fonts/YekanBakhFaNum-Bold.woff') format("woff");
+}
+@font-face {
+  font-family: payda-Regular;
+  font-weight: 400;
+  src: url('../src/fonts/payda/woff/PeydaWeb-Regular.woff') format("woff");
+}
+@font-face {
+  font-family: payda-Medium;
+  font-weight: 500;
+  src: url('../src/fonts/payda/woff/PeydaWeb-Medium.woff') format("woff");
+}
+@font-face {
+  font-family: payda-SemiBold;
+  font-weight: 600;
+  src: url('../src/fonts/payda/woff/PeydaWeb-SemiBold.woff') format("woff");
+}
+@font-face {
+  font-family: payda-Bold;
+  font-weight: 700;
+  src: url('../src/fonts/payda/woff/PeydaWeb-Bold.woff') format("woff");
+}
+@font-face {
+  font-family: payda-ExtraBold;
+  font-weight: 800;
+  src: url('../src/fonts/payda/woff/PeydaWeb-ExtraBold.woff') format("woff");
+}
+@font-face {
+  font-family: payda-Black;
+  font-weight: 900;
+  src: url('../src/fonts/payda/woff/PeydaWeb-Black.woff') format("woff");
+}
+@font-face {
+  font-family: Montserrat-Regular;
+
+  src: url('../src/fonts/Montserrat-Regular.ttf') format("trueType");
+}
+@font-face {
+  font-family: Montserrat-Bold;
+
+  src: url('../src/fonts/Montserrat-Bold.ttf') format("trueType");
+}
+.font-faNumRegular{
+  font-weight: 400;
+  @apply ltr:font-MontserratRegular;
+  
+}
+.font-faNumBold{
+  font-weight: 700;
+  @apply ltr:font-MontserratBold;
+}
+.font-normal{
+  font-weight: 400;
+  @apply rtl:font-paydaRegular ltr:font-MontserratRegular;
+}
+.font-medium{
+  font-weight: 500;
+  @apply rtl:font-paydaMedium;
+}
+.font-semibold{
+  font-weight: 600;
+  @apply rtl:font-paydaSemiBold ltr:font-MontserratBold;
+}
+.font-bold{
+  font-weight: 700;
+  @apply rtl:font-paydaBold ltr:font-MontserratBold;
+}
+.font-extrabold{
+  font-weight: 800;
+  @apply rtl:font-paydaExtraBold ltr:font-MontserratBold;
+}
+.font-black{
+  font-weight: 900;
+  @apply rtl:font-paydaBlack ltr:font-MontserratBold;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: payda-Regular !important;
+  user-select: none;
+  overflow-x: hidden;
+  background-color: #0D0F11;
+}
+header ul li{
+  position: relative;
+}
+header ul li::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFCF72;
+  width: 23px;
+  height: 4px;
+  border-radius: 2px;
+  box-shadow: 0px 4px 64px 6px #FFCF72;
+  bottom: -20px;
+  transition: all .4s;
+  opacity: 0;
+  visibility: hidden;
+}
+header ul li:hover:after,header ul li.active:after{
+  bottom: -9px;
+  opacity: 100%;
+  visibility: visible;
+}
+/* global styles */
+a {
+  cursor: pointer;
+  transition: all .4s
+}
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.transition {
+  @apply transition-all duration-300;
+}
+.bg-gradient-1{
+  background: linear-gradient(90deg, #0C0A13 2.31%, #FCF296 47.25%, #0C0A13 99.25%);
+}
+.bg-blur-1{
+  backdrop-filter: blur(36.101966857910156px);
+}
+.bg-blur-2{
+  backdrop-filter: blur(19.462600708007812px)
+}
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before{
+  content: '';
+  position: absolute;
+  background: radial-gradient(57.57% 162.14% at 48.67% 42.43%, #FFFFFF 0%, rgba(255, 255, 255, 0) 80%);
+  height: 0.6px;
+  width: 30%;
+  top: 1px;
+  right: 18%;
+}
+.gradient-border::after{
+  content: '';
+  position: absolute;
+  background: radial-gradient(57.57% 162.14% at 48.67% 42.43%, #FFFFFF 0%, rgba(255, 255, 255, 0) 80%);
+  height: 0.6px;
+  width: 30%;
+  bottom: 2px;
+  left: 18%;
+}
+/* hover */
+.btnHover {
+  transition: all .4s;
+  overflow: hidden;
+  position: relative;
+}
+.btnHover::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient( 120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 70% );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+.btnHover:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+.btnHover2:hover{
+  animation: jello-horizontal 0.9s both;
+}
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+/*  */
+.shadow-1{
+  box-shadow: 0px 4px 74px 0px #731856;
+
+}
+/* accordion */
+.acordionBtn{
+  cursor: pointer;
+}
+.acordionBtn.active{
+  background-color: #FCF296;
+  color: #000000;
+}
+.acordionBtn.active > div > div{
+  border: 1px solid #FCF296;
+}
+.acordionBtn > div > div p{
+  display: block;
+}
+.acordionBtn.active > div > div p{
+  display: none;
+}
+.acordionBtn.active > div > div svg{
+  display: block;
+}
+.acordionBtn > div > div svg{
+  display: none;
+}
+.acordionBtn.active > div > div svg path{
+  stroke: #FCF296;
+}
+.acordionBtn,.acordionBtn > svg,.acordionBtn > div > div,.acordionBtn > div > div svg path{
+  transition: all .4s;
+}
+.acordionContent{
+  max-height: 0;
+  overflow: hidden;
+  transition: all .4s;
+}
+.acordionContent.active {
+  max-height: 2000px;
+  overflow: visible;
+}
+/* overlay */
+#overlay{
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.618);
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s;
+}
+#overlay.active{
+  visibility: visible;
+  opacity: 100%;
+}
+
+/* after */
+
+.after-1{
+  position: relative;
+}
+
+.after-1::after{
+  content: '';
+  position: absolute;
+  background: linear-gradient(180deg, rgba(13, 15, 17, 0) 47.14%, rgba(13, 15, 17, 0.820608) 70.6%, #0D0F11 95.61%);
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 321px;
+  width: 100%;
+}
+
+.mobileMenu.active{
+  left: 0;
+}
+
+/* swiper */
+
+.swiper-pagination-bullet{
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #D9D9D9 !important;
+  border-radius: 100% !important;
+  opacity: 100% !important;
+}
+.swiper-pagination-bullet-active{
+  background-color: #FFCF72 !important;
+  width: 18px !important;
+  border-radius: 4px !important;
+}
+.banner .swiper-slide,.banner .swiper-slide div div,.casino .swiper-slide div,.casino .swiper-slide div div,.casino .swiper-slide p,.casino .swiper-slide a
+,.casino .swiper-slide svg path{
+  transition: all .4s;
+}
+.banner .swiper-slide div div{
+  opacity: 0;
+  visibility: hidden;
+}
+.banner .swiper-slide-active div div{
+  opacity: 100%;
+  visibility: visible;
+}
+.banner .swiper-slide.swiper-slide-prev{
+  transform: skewY(-12deg) translateY(-73px);
+}
+.banner .swiper-slide.swiper-slide-next{
+  transform: skewY(12deg) translateY(-73px);
+}
+.casino .swiper-slide-active div{
+  background-color: #FCF296;
+}
+.casino .swiper-slide-active div div{
+  background-color: white;
+}
+.casino .swiper-slide-active p,.casino .swiper-slide-active a,.casino .swiper-slide-active svg path{
+  color: #0C0912;
+  fill: #0C0912;
+}
+/* accordion */
+.accordionContent {
+  transition: all .4s;
+  max-height: 0;
+  overflow: hidden;
+}
+.accordionContent.active {
+  max-height: 2000px;
+}
+@media (max-width: 1200px) {
+  .casino .swiper-slide.swiper-slide-next,.casino .swiper-slide {
+    transform: scale(1) !important; /* اندازه اسلاید فعال (وسط) */
+  }
+}
+@media (max-width: 1024px) {
+  .banner::after{
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.353);
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 992px) {
+  
+}
+@media (max-width: 768px) {
+.banner .swiper-slide.swiper-slide-prev{
+  transform: skewY(-12deg) translateY(-52px);
+}
+.banner .swiper-slide.swiper-slide-next{
+  transform: skewY(12deg) translateY(-52px);
+}
+}
+@media (max-width: 576px) {
+  .banner{
+    background-position: -258px;;
+  }
+}
