@@ -669,14 +669,6 @@ video {
   grid-column: span 12 / span 12;
 }
 
-.col-span-5 {
-  grid-column: span 5 / span 5;
-}
-
-.col-span-7 {
-  grid-column: span 7 / span 7;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -696,6 +688,10 @@ video {
 
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .mt-14 {
@@ -738,10 +734,6 @@ video {
   margin-top: 2.25rem;
 }
 
-.mt-\[122px\] {
-  margin-top: 122px;
-}
-
 .mt-\[136px\] {
   margin-top: 136px;
 }
@@ -754,10 +746,6 @@ video {
   margin-top: 14px;
 }
 
-.mt-\[160px\] {
-  margin-top: 160px;
-}
-
 .mt-\[27px\] {
   margin-top: 27px;
 }
@@ -768,10 +756,6 @@ video {
 
 .mt-\[6px\] {
   margin-top: 6px;
-}
-
-.mt-12 {
-  margin-top: 3rem;
 }
 
 .block {
@@ -856,6 +840,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-\[291px\] {
+  height: 291px;
 }
 
 .w-3 {
@@ -998,6 +986,10 @@ video {
   gap: 1rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
 }
@@ -1010,14 +1002,6 @@ video {
   gap: 2rem;
 }
 
-.gap-9 {
-  gap: 2.25rem;
-}
-
-.gap-\[110px\] {
-  gap: 110px;
-}
-
 .gap-\[14px\] {
   gap: 14px;
 }
@@ -1028,10 +1012,6 @@ video {
 
 .gap-\[9px\] {
   gap: 9px;
-}
-
-.gap-5 {
-  gap: 1.25rem;
 }
 
 .overflow-hidden {
@@ -1176,6 +1156,11 @@ video {
   background-color: rgb(252 242 150 / var(--tw-bg-opacity));
 }
 
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .\!p-4 {
   padding: 1rem !important;
 }
@@ -1184,12 +1169,12 @@ video {
   padding: 0.25rem;
 }
 
-.p-6 {
-  padding: 1.5rem;
+.p-5 {
+  padding: 1.25rem;
 }
 
-.p-7 {
-  padding: 1.75rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-\[13px\] {
@@ -1202,10 +1187,6 @@ video {
 
 .p-\[5px\] {
   padding: 5px;
-}
-
-.p-5 {
-  padding: 1.25rem;
 }
 
 .px-14 {
@@ -1319,10 +1300,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[15px\] {
-  font-size: 15px;
 }
 
 .font-black {
@@ -2036,8 +2013,8 @@ a {
     flex-direction: row;
   }
 
-  .sm\:justify-start {
-    justify-content: flex-start;
+  .sm\:gap-7 {
+    gap: 1.75rem;
   }
 
   .sm\:gap-8 {
@@ -2048,8 +2025,9 @@ a {
     gap: 2.25rem;
   }
 
-  .sm\:gap-7 {
-    gap: 1.75rem;
+  .sm\:object-none {
+    -o-object-fit: none;
+       object-fit: none;
   }
 
   .sm\:p-7 {
@@ -2116,20 +2094,20 @@ a {
     margin-top: 120px;
   }
 
-  .md\:mt-\[154px\] {
-    margin-top: 154px;
-  }
-
-  .md\:mt-\[225px\] {
-    margin-top: 225px;
-  }
-
   .md\:mt-\[122px\] {
     margin-top: 122px;
   }
 
+  .md\:mt-\[154px\] {
+    margin-top: 154px;
+  }
+
   .md\:mt-\[160px\] {
     margin-top: 160px;
+  }
+
+  .md\:mt-\[225px\] {
+    margin-top: 225px;
   }
 
   .md\:h-full {

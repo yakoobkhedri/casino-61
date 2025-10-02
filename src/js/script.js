@@ -37,9 +37,11 @@ var banner = new Swiper(".banner", {
     },
     992: {
       slidesPerView: 1.6,
+      spaceBetween: 16,
     },
     1024: {
       slidesPerView: 1.9,
+      spaceBetween: 16,
     }
   },
   pagination: {
