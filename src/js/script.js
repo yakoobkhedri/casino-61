@@ -34,14 +34,17 @@ var banner = new Swiper(".banner", {
     768: {
       slidesPerView: 1.4,
         spaceBetween: 16,
+          loop: true,
     },
     992: {
       slidesPerView: 1.6,
       spaceBetween: 16,
+        loop: true,
     },
     1024: {
       slidesPerView: 1.9,
       spaceBetween: 16,
+        loop: true,
     }
   },
   pagination: {

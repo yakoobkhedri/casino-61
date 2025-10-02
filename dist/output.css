@@ -814,12 +814,12 @@ video {
   height: 260px;
 }
 
-.h-\[34px\] {
-  height: 34px;
+.h-\[291px\] {
+  height: 291px;
 }
 
-.h-\[353px\] {
-  height: 353px;
+.h-\[34px\] {
+  height: 34px;
 }
 
 .h-\[47px\] {
@@ -840,10 +840,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[291px\] {
-  height: 291px;
 }
 
 .w-3 {
