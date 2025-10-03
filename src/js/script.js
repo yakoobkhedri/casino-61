@@ -30,21 +30,30 @@ var banner = new Swiper(".banner", {
   autoplay: true,
   centeredSlides: true,
   loop: true,
-    breakpoints: {
+  initialSlide: 1, // اسلاید دوم اکتیو
+  
+  // این قسمت رو اضافه کنید
+  on: {
+    init: function () {
+      // بعد از لود، یک اسلاید به عقب برو تا سمت چپ پر شود
+      setTimeout(() => {
+        this.slidePrev(0); // بدون انیمیشن
+      }, 50);
+    },
+  },
+  
+  breakpoints: {
     768: {
       slidesPerView: 1.4,
-        spaceBetween: 16,
-          loop: true,
+      spaceBetween: 16,
     },
     992: {
       slidesPerView: 1.6,
       spaceBetween: 16,
-        loop: true,
     },
     1024: {
       slidesPerView: 1.9,
       spaceBetween: 16,
-        loop: true,
     }
   },
   pagination: {
